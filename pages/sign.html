@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f0f5fd">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <title>FittyBuddy</title>
+    <link rel="shortcut icon" href="/img/FITTYBUDDY.jpg" type="image/jpg">
+</head>
+
+<body id="login-page">
+
+    <div class="login-container">
+        
+        <div class="login-title">
+            <img src="/img/FITTYBUDDY.jpg" alt="">
+            <h1>FittyBuddy</h1>    
+        </div>
+        
+        <h3>Bem vindo ao FittyBuddy!</h3>
+        
+        <form id="login-form">
+
+            <label for="username">Nome de Usuário:</label><br>
+            <input type="text" id="username" name="username" placeholder="Username"><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="example@example.com"><br>
+            
+            <label for="password">Senha:</label><br>
+            <input type="password" id="password" name="password" placeholder="******"><br>
+            
+            <label for="confirm-password">Confirmar Senha:</label><br>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="******"><br><br>
+        </form>
+        
+        <a href="/pages/login.html" style="text-align: center;">
+            <button id="btn-submit">Cadastrar</button>
+        </a>
+        
+
+    </div>
+          
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful');
+    }, function(err) {
+      // Registration failed
+      console.log('ServiceWorker registration failed: ', err);
+    });
+    });
+}
+</script>
+</body>
+
+</html>
