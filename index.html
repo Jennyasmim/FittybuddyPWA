@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,185 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f0f5fd">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <title>FittyBuddy</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f5fd;
-            margin: 0;
-            display: flex;
-        }
-
-        .left-section {
-            width: 250px;
-            background-color: #2d3e50;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px;
-            height: 100vh;
-        }
-
-        .menu-lateral h2 {
-            margin-bottom: 30px;
-        }
-
-        .menu-lateral .item {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .menu-lateral .item i {
-            font-size: 20px;
-            margin-right: 10px;
-        }
-
-        .menu-lateral .item h3,
-        .menu-lateral .item a {
-            font-size: 18px;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .menu-lateral .item.active {
-            background-color: #3c5067;
-            border-radius: 8px;
-            padding: 10px;
-        }
-
-        .menu-lateral .item.active h3,
-        .menu-lateral .item.active a {
-            color: #ffffff;
-        }
-
-        .sign-out {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .sign-out i {
-            font-size: 20px;
-            margin-right: 10px;
-        }
-
-        .sign-out h3 {
-            font-size: 18px;
-        }
-
-        .main {
-            flex-grow: 1;
-            padding: 40px;
-            overflow-y: auto;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .separator {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #2d3e50;
-            padding-bottom: 10px;
-        }
-
-        .card-atividades {
-            margin-bottom: 40px;
-        }
-
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .carousel .content {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: calc(33.333% - 20px);
-            box-sizing: border-box;
-            transition: transform 0.2s;
-        }
-
-        .carousel .content:hover {
-            transform: translateY(-5px);
-        }
-
-        .carousel .content i {
-            font-size: 40px;
-            color: #2d3e50;
-            margin-bottom: 10px;
-        }
-
-        .carousel .content h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .line2 {
-            height: 2px;
-            background-color: #2d3e50;
-            margin-bottom: 10px;
-        }
-
-        .atividade-info p {
-            margin: 5px 0;
-        }
-
-        .info-label {
-            font-weight: bold;
-        }
-
-        .form-nova-atividade {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .form-nova-atividade h3 {
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-
-        .form-nova-atividade label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-nova-atividade input,
-        .form-nova-atividade button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #2d3e50;
-            border-radius: 5px;
-        }
-
-        .form-nova-atividade button {
-            background-color: #2d3e50;
-            color: #ffffff;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .form-nova-atividade button:hover {
-            background-color: #1b2a3d;
-        }
-    </style>
+    <link rel="shortcut icon" href="/img/FITTYBUDDY.jpg" type="image/jpg">
 </head>
 
 <body>
@@ -193,40 +19,30 @@
 
     <div class="left-section">
         <div class="menu-lateral">
-            <a href="/pages/login.html">
-                <h2>FittyBuddy</h2>
-            </a>
+            <a href="/pages/login.html"><h2>FittyBuddy</h2></a>
             <div class="item">
                 <i class="ri-apps-line"></i>
-                <a href="/index.html">
-                    <h3>Painel</h3>
-                </a>
+                <h3>Painel</h3>
             </div>
-            <div class="item active">
+            <div class="item">
                 <i class="ri-run-line"></i>
-                <h3><a href="#">Registro de Atividades</a></h3>
+                <a href="/pages/registro.html"><h3>Registro de Atividades</h3></a>
             </div>
             <div class="item">
                 <i class="ri-pie-chart-line"></i>
-                <a href="/">
-                    <h3>Plano de Treino</h3>
-                </a>
+                <h3>Plano de Treino</h3>
             </div>
             <div class="item">
                 <i class="ri-user-line"></i>
-                <a href="/pages/perfil.html">
-                    <h3>Perfil</h3>
-                </a>
+                <a href="/pages/perfil.html"><h3>Perfil</h3></a>
             </div>
             <div class="item">
                 <i class="ri-treasure-map-line"></i>
-                <a href="/pages/locais.html">
-                    <h3>Locais de Treino</h3>
-                </a>
+                <a href="/pages/locais.html"><h3>Locais de Treino</h3></a>
             </div>
             <div class="item">
                 <i class="ri-shake-hands-line"></i>
-                <h3>Compartilhar Progresso</h3>
+                <a href="/pages/progresso.html"><h3>Compartilhar Progresso</h3></a>
             </div>
             <div class="item">
                 <i class="ri-settings-3-line"></i>
@@ -240,121 +56,158 @@
         </div>
     </div>
 
+    <!-- Seção Lateral -->
     <div class="main">
+
         <div class="header">
-            <h3 class="separator">Registros de Atividades</h3>
-        </div>
 
-        <!-- Container de cartões de atividades -->
-        <div class="card-atividades">
-            <div class="card-container">
-                <div class="content">
-                    <i class="ri-run-line"></i>
-                    <h3>Caminhada</h3>
-                    <div class="line2"></div>
-                    <div class="atividade-info">
-                        <p><span class="info-label">Data:</span> 20/04/2024</p>
-                        <p><span class="info-label">Hora:</span> 08:00 - 09:00</p>
-                        <p><span class="info-label">Duração:</span> 1 hora</p>
-                        <p><span class="info-label">Distância:</span> 5 km</p>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <i class="ri-weight-fill"></i>
-                    <h3>Academia</h3>
-                    <div class="line2"></div>
-                    <div class="atividade-info">
-                        <p><span class="info-label">Data:</span> 21/04/2024</p>
-                        <p><span class="info-label">Hora:</span> 10:00 - 11:00</p>
-                        <p><span class="info-label">Duração:</span> 1 hora</p>
-                        <p><span class="info-label">Distância:</span> N/A</p>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <i class="ri-riding-line"></i>
-                    <h3>Bicicleta</h3>
-                    <div class="line2"></div>
-                    <div class="atividade-info">
-                        <p><span class="info-label">Data:</span> 22/04/2024</p>
-                        <p><span class="info-label">Hora:</span> 15:00 - 16:00</p>
-                        <p><span class="info-label">Duração:</span> 1 hora</p>
-                        <p><span class="info-label">Distância:</span> 10 km</p>
-                    </div>
-                </div>
+            <div class="search">
+                <button><i class="ri-search-2-line"></i></button>
+                <input type="text" placeholder="Pesquisar">
+                <i class="ri-equalizer-line"></i>
+            </div>
+            <div class="icon-btns">
+                <i class="ri-notification-line"></i>
+                <i class="ri-menu-line" id="menu-btn"></i>
             </div>
         </div>
 
-        <div class="form-nova-atividade">
-            <h3>Nova Atividade</h3>
-            <form>
-                <label for="tipo">Tipo de Atividade</label>
-                <input type="text" id="tipo" name="tipo" required>
+        <h3 class="separator">
+            FittyBuddy
+        </h3>
 
-                <label for="data">Data</label>
-                <input type="date" id="data" name="data" required>
+        <!-- Seção de Destaque -->
+        <div class="destaque-seção">
+         
+            <div class="bpm-colum">
+                <i class="ri-heart-fill"></i>
+                <h5>BPM</h5>
+            </div>
 
-                <label for="hora">Hora</label>
-                <input type="time" id="hora" name="hora" required>
+            <div class="sleep-colum">
+                <i class="ri-moon-clear-line"></i>
+                <h5>SLEEP TIME</h5>
+            </div>
 
-                <label for="duracao">Duração</label>
-                <input type="text" id="duracao" name="duracao" required>
-
-                <label for="distancia">Distância</label>
-                <input type="text" id="distancia" name="distancia" required>
-
-                <button type="submit">Registrar</button>
-            </form>
         </div>
-    </div>
 
+        <div class="line"></div>
+        
+        <h3 class="separator2">
+            Atividades
+        </h3>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#form-nova-atividade').on('submit', function (event) {
-                event.preventDefault();
-                var tipoAtividade = $('#tipo-atividade').val();
-                var data = $('#data').val();
-                var horaInicio = $('#hora-inicio').val();
-                var horaFim = $('#hora-fim').val();
-                var duracao = $('#duracao').val();
-                var distancia = tipoAtividade.toLowerCase() === 'caminhada' || tipoAtividade.toLowerCase() === 'bicicleta' ? prompt("Informe a distância:") : 'N/A';
+        <!-- Container de cartões de atividades -->
+        <div class="card-atividades">
+            <button class="prev-btn"><i class="ri-arrow-left-line"></i></button>
+            <div class="card-container">
+                <div class="carousel">
 
-                var newActivity = `
                     <div class="content">
-                        <i class="ri-${getActivityIcon(tipoAtividade)}"></i>
-                        <h3>${tipoAtividade}</h3>
+                        <i class="ri-run-line"></i>
+                        <h3>Caminhada</h3>
                         <div class="line2"></div>
                         <div class="atividade-info">
-                            <p><span class="info-label">Data:</span> ${data}</p>
-                            <p><span class="info-label">Hora:</span> ${horaInicio} - ${horaFim}</p>
-                            <p><span class="info-label">Duração:</span> ${duracao} hora(s)</p>
-                            <p><span class="info-label">Distância:</span> ${distancia}</p>
-                        </div>
+                            <p><span class="info-label">Data:</span> 20/04/2024</p>
+                            <p><span class="info-label">Hora:</span> 08:00 - 09:00</p>
+                            <p><span class="info-label">Duração:</span> 1 hora</p>
+                            <p><span class="info-label">Distância:</span> 5 km</p>        
+                        </div>   
                     </div>
-                `;
+                    
+                    <div class="content">
+                        <i class="ri-weight-fill"></i>
+                        <h3>Academia</h3>
+                        <div class="line2"></div>
+                        <div class="atividade-info">
+                            <p><span class="info-label">Data:</span> 21/04/2024</p>
+                            <p><span class="info-label">Hora:</span> 10:00 - 11:00</p>
+                            <p><span class="info-label">Duração:</span> 1 hora</p>
+                            <p><span class="info-label">Distância:</span> N/A</p>        
+                        </div>   
+                    </div>
+                    
+                    <div class="content">
+                        <i class="ri-riding-line"></i>
+                        <h3>Bicicleta</h3>
+                        <div class="line2"></div>
+                        <div class="atividade-info">
+                            <p><span class="info-label">Data:</span> 22/04/2024</p>
+                            <p><span class="info-label">Hora:</span> 15:00 - 16:00</p>
+                            <p><span class="info-label">Duração:</span> 1 hora</p>
+                            <p><span class="info-label">Distância:</span> 10 km</p>        
+                        </div>   
+                    </div>
+                    
+                    <div class="content">
+                        <i class="ri-basketball-fill"></i>
+                        <h3>Basquete</h3>
+                        <div class="line2"></div>
+                        <div class="atividade-info">
+                            <p><span class="info-label">Data:</span> 23/04/2024</p>
+                            <p><span class="info-label">Hora:</span> 18:00 - 19:00</p>
+                            <p><span class="info-label">Duração:</span> 1 hora</p>
+                            <p><span class="info-label">Distância:</span> N/A</p>        
+                        </div>   
+                    </div>
+                    
 
-                $('.card-container').append(newActivity); // Alteração aqui para adicionar ao contêiner correto
-                this.reset();
-            });
+                </div>
+            </div>
+            <button class="next-btn"><i class="ri-arrow-right-line"></i></button>
+        </div>
+        
+    </div>
 
-            function getActivityIcon(tipoAtividade) {
-                switch (tipoAtividade.toLowerCase()) {
-                    case 'caminhada':
-                        return 'run-line';
-                    case 'academia':
-                        return 'weight-fill';
-                    case 'bicicleta':
-                        return 'riding-line';
-                    case 'basquete':
-                        return 'basketball-fill';
-                    default:
-                        return 'star-line';
-                }
-            }
+    <div class="right-section">
+
+        <div class="profile">
+            <div class="info">
+                <img src="/">
+                <div class="account">
+                    <h5>Usuário</h5>
+                    <p>Usuario@gmail.com</p>
+                </div>
+            </div>
+            <i class="ri-arrow-down-s-line"></i>
+        </div>
+
+        <div class="widgets">
+            
+            <div class="disk">
+                
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+                <div class="info">
+                    
+                    <h5><span>Progresso de Atividades</span></h5>
+                    
+                </div>
+            </div>
+            
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FittyBuddy. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script>
+            if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful');
+        }, function(err) {
+          // Registration failed
+          console.log('ServiceWorker registration failed: ', err);
         });
+        });
+}
     </script>
 </body>
 
