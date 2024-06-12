@@ -6,10 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f0f5fd">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <title>FittyBuddy</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f5fd;
+            margin: 0;
+            display: flex;
+        }
+
+        .left-section {
+            width: 250px;
+            background-color: #2d3e50;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .menu-lateral h2 {
+            margin-bottom: 30px;
+        }
+
+        .menu-lateral .item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-lateral .item i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .menu-lateral .item h3,
+        .menu-lateral .item a {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .menu-lateral .item.active {
+            background-color: #3c5067;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .menu-lateral .item.active h3,
+        .menu-lateral .item.active a {
+            color: #ffffff;
+        }
+
+        .sign-out {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .sign-out i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .sign-out h3 {
+            font-size: 18px;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .separator {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2d3e50;
+            padding-bottom: 10px;
+        }
+
+        .card-atividades {
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .carousel .content {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.2s;
+        }
+
+        .carousel .content:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel .content i {
+            font-size: 40px;
+            color: #2d3e50;
+            margin-bottom: 10px;
+        }
+
+        .carousel .content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .line2 {
+            height: 2px;
+            background-color: #2d3e50;
+            margin-bottom: 10px;
+        }
+
+        .atividade-info p {
+            margin: 5px 0;
+        }
+
+        .info-label {
+            font-weight: bold;
+        }
+
+        .form-nova-atividade {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .form-nova-atividade h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .form-nova-atividade label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-nova-atividade input,
+        .form-nova-atividade button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #2d3e50;
+            border-radius: 5px;
+        }
+
+        .form-nova-atividade button {
+            background-color: #2d3e50;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .form-nova-atividade button:hover {
+            background-color: #1b2a3d;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,10 +193,14 @@
 
     <div class="left-section">
         <div class="menu-lateral">
-            <a href="/pages/login.html"><h2>FittyBuddy</h2></a>
+            <a href="/pages/login.html">
+                <h2>FittyBuddy</h2>
+            </a>
             <div class="item">
                 <i class="ri-apps-line"></i>
-                <a href="/index.html"><h3>Painel</h3></a>
+                <a href="/index.html">
+                    <h3>Painel</h3>
+                </a>
             </div>
             <div class="item active">
                 <i class="ri-run-line"></i>
@@ -29,15 +208,21 @@
             </div>
             <div class="item">
                 <i class="ri-pie-chart-line"></i>
-                <a href="/"><h3>Plano de Treino</h3></a> 
+                <a href="/">
+                    <h3>Plano de Treino</h3>
+                </a>
             </div>
             <div class="item">
                 <i class="ri-user-line"></i>
-                <a href="/pages/perfil.html"><h3>Perfil</h3></a>
+                <a href="/pages/perfil.html">
+                    <h3>Perfil</h3>
+                </a>
             </div>
             <div class="item">
                 <i class="ri-treasure-map-line"></i>
-                <a href="/pages/locais.html"><h3>Locais de Treino</h3></a> 
+                <a href="/pages/locais.html">
+                    <h3>Locais de Treino</h3>
+                </a>
             </div>
             <div class="item">
                 <i class="ri-shake-hands-line"></i>
@@ -63,62 +248,114 @@
         <!-- Container de cartões de atividades -->
         <div class="card-atividades">
             <div class="card-container">
-                <div class="carousel">
-                    <!-- Inserir conteúdo dinâmico aqui -->
-                    <div class="content">
-                        <i class="ri-run-line"></i>
-                        <h3>Caminhada</h3>
-                        <div class="line2"></div>
-                        <div class="atividade-info">
-                            <p><span class="info-label">Data:</span> 20/04/2024</p>
-                            <p><span class="info-label">Hora:</span> 08:00 - 09:00</p>
-                            <p><span class="info-label">Duração:</span> 1 hora</p>
-                            <p><span class="info-label">Distância:</span> 5 km</p>
-                        </div>
+                <div class="content">
+                    <i class="ri-run-line"></i>
+                    <h3>Caminhada</h3>
+                    <div class="line2"></div>
+                    <div class="atividade-info">
+                        <p><span class="info-label">Data:</span> 20/04/2024</p>
+                        <p><span class="info-label">Hora:</span> 08:00 - 09:00</p>
+                        <p><span class="info-label">Duração:</span> 1 hora</p>
+                        <p><span class="info-label">Distância:</span> 5 km</p>
                     </div>
+                </div>
 
-                    <!-- Exemplo adicional de registro de atividade -->
-                    <div class="content">
-                        <i class="ri-weight-fill"></i>
-                        <h3>Levantamento de Peso</h3>
-                        <div class="line2"></div>
-                        <div class="atividade-info">
-                            <p><span class="info-label">Data:</span> 22/04/2024</p>
-                            <p><span class="info-label">Hora:</span> 09:00 - 10:00</p>
-                            <p><span class="info-label">Duração:</span> 1 hora</p>
-                            <p><span class="info-label">Peso:</span> 50 kg</p>
-                        </div>
+                <div class="content">
+                    <i class="ri-weight-fill"></i>
+                    <h3>Academia</h3>
+                    <div class="line2"></div>
+                    <div class="atividade-info">
+                        <p><span class="info-label">Data:</span> 21/04/2024</p>
+                        <p><span class="info-label">Hora:</span> 10:00 - 11:00</p>
+                        <p><span class="info-label">Duração:</span> 1 hora</p>
+                        <p><span class="info-label">Distância:</span> N/A</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <i class="ri-riding-line"></i>
+                    <h3>Bicicleta</h3>
+                    <div class="line2"></div>
+                    <div class="atividade-info">
+                        <p><span class="info-label">Data:</span> 22/04/2024</p>
+                        <p><span class="info-label">Hora:</span> 15:00 - 16:00</p>
+                        <p><span class="info-label">Duração:</span> 1 hora</p>
+                        <p><span class="info-label">Distância:</span> 10 km</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Formulário para adicionar nova atividade -->
         <div class="form-nova-atividade">
-            <h3>Adicionar Nova Atividade</h3>
+            <h3>Nova Atividade</h3>
             <form>
-                <label for="tipo-atividade">Tipo de Atividade:</label>
-                <input type="text" id="tipo-atividade" name="tipo-atividade" required>
+                <label for="tipo">Tipo de Atividade</label>
+                <input type="text" id="tipo" name="tipo" required>
 
-                <label for="data">Data:</label>
+                <label for="data">Data</label>
                 <input type="date" id="data" name="data" required>
 
-                <label for="hora-inicio">Hora de Início:</label>
-                <input type="time" id="hora-inicio" name="hora-inicio" required>
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" name="hora" required>
 
-                <label for="hora-fim">Hora de Fim:</label>
-                <input type="time" id="hora-fim" name="hora-fim" required>
+                <label for="duracao">Duração</label>
+                <input type="text" id="duracao" name="duracao" required>
 
-                <label for="duracao">Duração (em horas):</label>
-                <input type="number" id="duracao" name="duracao" required>
+                <label for="distancia">Distância</label>
+                <input type="text" id="distancia" name="distancia" required>
 
-                <button type="submit">Adicionar Atividade</button>
+                <button type="submit">Registrar</button>
             </form>
         </div>
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#form-nova-atividade').on('submit', function (event) {
+                event.preventDefault();
+                var tipoAtividade = $('#tipo-atividade').val();
+                var data = $('#data').val();
+                var horaInicio = $('#hora-inicio').val();
+                var horaFim = $('#hora-fim').val();
+                var duracao = $('#duracao').val();
+                var distancia = tipoAtividade.toLowerCase() === 'caminhada' || tipoAtividade.toLowerCase() === 'bicicleta' ? prompt("Informe a distância:") : 'N/A';
+
+                var newActivity = `
+                    <div class="content">
+                        <i class="ri-${getActivityIcon(tipoAtividade)}"></i>
+                        <h3>${tipoAtividade}</h3>
+                        <div class="line2"></div>
+                        <div class="atividade-info">
+                            <p><span class="info-label">Data:</span> ${data}</p>
+                            <p><span class="info-label">Hora:</span> ${horaInicio} - ${horaFim}</p>
+                            <p><span class="info-label">Duração:</span> ${duracao} hora(s)</p>
+                            <p><span class="info-label">Distância:</span> ${distancia}</p>
+                        </div>
+                    </div>
+                `;
+
+                $('#carousel').append(newActivity);
+                this.reset();
+            });
+
+            function getActivityIcon(tipoAtividade) {
+                switch (tipoAtividade.toLowerCase()) {
+                    case 'caminhada':
+                        return 'run-line';
+                    case 'academia':
+                        return 'weight-fill';
+                    case 'bicicleta':
+                        return 'riding-line';
+                    case 'basquete':
+                        return 'basketball-fill';
+                    default:
+                        return 'star-line';
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
